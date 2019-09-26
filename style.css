@@ -1,0 +1,94 @@
+body{
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  background-image: url("prism.png");
+  background-repeat: repeat;
+  /* #d0d0d0  #e0f5f5 #369093 */
+}
+
+.card{
+  width: 800px;
+  height: 400px;
+  margin: auto;
+  align-self: center;
+  border: 5px solid grey;
+  -webkit-box-shadow: 10px 10px 14px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 14px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 14px 0px rgba(0,0,0,0.75);
+  background-image: linear-gradient(to right bottom, #d0d0d0, #c6c6c7, #bcbdbe, #b1b4b5, #a7abac, #9ba0a1, #8f9696, #848b8b, #747d7d, #656e6e, #566161, #475353);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 10px 10px;
+  grid-template-areas: "photo photo content content content" "photo photo content content content" "photo photo content content content" "photo photo content content content" "name name content content content" "name name content content content";
+  height: 100%;
+}
+
+.photo {
+  grid-area: photo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.photo img{
+  width: 225px;
+  height: 225px;
+  border: 5px solid grey;
+}
+
+.content {
+  grid-area: content;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.content h2{
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 0px;
+}
+
+.content p{
+  font-family: 'Raleway', sans-serif;
+  font-weight: lighter;
+  line-height: 1.6em;
+}
+.img-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.name {
+  grid-area: name;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.name h2,h1 {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+}
+
+.name h2 {
+
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.name h1 {
+  font-weight: lighter;
+  font-size: 20px;
+}
